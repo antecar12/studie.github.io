@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Studie</title>
+      <script>
+        function redirectToPage(page, event) {
+          event.preventDefault();
+          switch(page) {
+            case 'page6-resultspage.html':
+              window.location.href = page;
+              break;
+            // add more cases for additional pages and buttons
+            default:
+              console.log("Invalid page");
+          }
+        }
+        </script>
+      <style>
+            body {
+              font-family: sans-serif;
+            }
+
+            .container {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              background-color: #F5F5F5;
+            }
+
+            form {
+              background-color: #FFFFFF;
+              border-radius: 10px;
+              padding: 30px;
+              box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+              width: 400px;
+            }
+          
+            .form-group {
+              margin-bottom: 20px;
+            }
+
+            label {
+              display: block;
+              margin-bottom: 5px;
+              font-weight: bold;
+              color: #333333;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+              width: calc(100% - 24px);
+              padding: 10px;
+              border-radius: 5px;
+              border: 1px solid #CCCCCC;
+              font-size: 16px;
+              color: #333333;
+              margin: 0 auto;
+              display: block;
+            }
+
+            input[type="text"]:focus,
+            input[type="password"]:focus {
+              outline: none;
+              border-color: #4CAF50;
+            }
+
+            #submit {
+              background-color: #4CAF50;
+              color: #FFFFFF;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background-color 0.2s ease-in-out;
+              width: 100%;
+              display: block;
+              margin: 20px auto 0;
+            }
+          
+            randomize-btn {
+              background-color: #4CAF50;
+              color: #FFFFFF;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background-color 0.2s ease-in-out;
+              width: 100%;
+              display: block;
+              margin: 20px auto 0;
+            }
+
+            button:hover {
+              background-color: #3e8e41;
+            }
+          
+            .image-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+
+              img {
+                width: 30%;
+                height: 30%;
+                object-fit: cover;
+                margin-right: 20px;
+                border: 1px solid #CCCCCC;
+                border-radius: 5px;
+              }
+
+              .square-btn {
+                  width: 30%;
+                  height: 120px;
+                  font-size: 30px;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  background-color: #4CAF50;
+                  color: #FFFFFF;
+                  border: none;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+              }
+
+              .square-btn:hover {
+                background-color: #3e8e41;
+              }
+              #submit:hover {
+              background-color: #3e8e41;
+              }
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Användartest</h1>
+      <form>
+        <div class="form-group">
+          <label for="participantid">Deltagar-ID:</label>
+          <input type="text" id="participantid" name="participantid" required>
+        </div>
+        <div class="form-group">
+          <label for="image-container">Bildinspiration:</label>
+          <div class="image-container">
+            <img src="images/1.jpg" alt="Image 1" id="image1">
+            <img src="images/2.jpg" alt="Image 2" id="image2">
+            <button id="randomize-btn" class="square-btn">&#x21bb;</button>
+          </div>
+          <script>
+            // Define the number of images to randomize
+            const numImages = 290;
+
+            // Get the image elements and the randomize button
+            const images = [];
+            for (let i = 1; i <= 2; i++) {
+              images.push(document.getElementById(`image${i}`));
+            }
+            const randomizeBtn = document.getElementById('randomize-btn');
+
+            // Add a click event listener to the randomize button
+            randomizeBtn.addEventListener('click', () => {
+              // Generate a random number between 1 and numImages
+              const randomNum1 = Math.floor(Math.random() * numImages) + 1;
+              let randomNum2 = Math.floor(Math.random() * numImages) + 1;
+              // Ensure that the second image is different from the first image
+              while (randomNum2 === randomNum1) {
+                randomNum2 = Math.floor(Math.random() * numImages) + 1;
+              }
+
+              // Set the source of the images to random images
+              images[0].src = `images/${randomNum1}.jpg`;
+              images[1].src = `images/${randomNum2}.jpg`;
+            });
+          </script>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Lösenord(fras):</label>
+          <input type="text" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm_password">Konfirmera Lösenord(fras):</label>
+          <input type="text" id="confirm_password" name="confirm_password" required>
+        </div>
+        <button id="submit" type="submit" onclick="redirectToPage('page6-resultspage.html', event)">Klar</button>
+      </form>
+    </div>
+  </body>
+</html>

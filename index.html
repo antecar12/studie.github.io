@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Studie</title>
+    <script>
+    function redirectToPage(page) {
+      switch(page) {
+        case 'page2a-accept.html':
+          window.location.href = page;
+          break;
+        case 'page2b-reject.html':
+          window.location.href = page;
+          break;
+        // add more cases for additional pages and buttons
+        default:
+          console.log("Invalid page");
+      }
+    }
+    </script>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 50px;
+      }
+        
+        h2 {
+            font-size: 20px;
+        }
+        
+        #buttons {
+            display: flex;
+        }
+        
+        #accept {
+              background-color: #4CAF50;
+              color: #FFFFFF;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background-color 0.2s ease-in-out;
+              width: 45%;
+              display: block;
+              margin: 20px auto 0;
+            }
+        #reject {
+              background-color: #c61a09;
+              color: #FFFFFF;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background-color 0.2s ease-in-out;
+              width: 45%;
+              display: block;
+              margin: 20px auto 0;
+            }
+        #accept:hover {
+              background-color: #3e8e41;
+              }
+        #reject:hover {
+              background-color: #990000;
+              }
+    </style>
+  </head>
+  <body>
+          <h1>Välkommen till studien!</h1>
+          <p>Studien inkluderar ett användartest samt en intervju och beräknas ta cirka 30 minuter att genomföra. Om detta är ok för dig så kan vi fortsätta.</p>
+          <h2>Syftet med studien:</h2>
+          <p>Genom att delta i denna studie kommer du hjälpa forskaren att utvärdera en ny mångfacetterad lösenordsskapandemetod som har tagits fram. I kort går metoden ut på att använda bilder som en inspirationskälla för att skapa unika lösenords(fraser) istället för lösen(ord). Det övergripande målet med metoden är att i slutändan framkalla lösenord med en samexistens av hög säkerhet och minnesbarhet, med förhoppningen att metoden samtidigt visar sig vara användbar och förser en god upplevelse för användaren. Genom att delta i denna studie kommer du att ge värdefull feedback om användbarheten och användarupplevelsen av metoden.</p>
+          <h2>Vad förväntas av dig som deltagare i studien?:</h2>
+          <p>Som deltagare i den här studien kommer du att bli ombedd att skapa en lösenordsfras med den nämnda lösenordsskapandemetoden. (Mer information och instruktioner för metoden kommer att förses längre fram innan användartestet påbörjas).</p>
+          <p>Efter att du skapat din lösenordsfras är användartestet över och du kommer att bli ombedd att delta i en intervju med forskaren. Under intervjun kommer du att bli tillfrågad om dina subjektiva upplevelser av metoden, vilket inkluderar dina känslor, åsikter och motivationer i relation till metoden, särskilt i jämförelse med dina tidigare erfarenheter av lösenordsskapande.</p>
+          <h2>Sekretess, villkor och samtycke:</h2>
+          <p>Observera att användartestet och intervjun kommer att spelas in på video, och ditt deltagar-ID, skapade lösenord(fras) och intervjusvar kommer att samlas in och analyseras efter testet. Ingen personlig eller känslig information som kan länkas tillbaka till dig kommer att publiceras någonstans, och all data kommer att hanteras med yttersta omsorg för att säkerställa din integritet. För att säkerställa din integritet ytterligare ber vi dig att skapa ett helt nytt lösenord under testet och undvika att använda befintliga lösenord som du vet är i användning. Avstå även från att inkludera personlig information i lösenordsfrasen du skapar. Notera även att texten i lösenordsfälten kommer att vara synlig, olikt hur det vanligtvis ser ut vid lösenordsskapande (med svarta prickar istället för bokstäver och symboler). Detta görs endast för att underlätta insamlingen av lösenordsfraserna inför senare analys.</p>
+          <p>Innan användartestet drar igång kommer du bli ombedd att fylla i ett litet formulär med personlig information. Detta inkluderar endast ålder, kön, samt dina uppskattade tidigare erfarenheter av datoranvändning och lösenordsskapande. Detta görs endast för att underlätta identifieringen och analysen av korrelationer mellan olika deltagarförhållanden och potentiella anomalier i datan som samlas in.</p>
+          <p>Innan du fortsätter, vänligen notera att ditt deltagande i denna studie är helt frivilligt. Om du väljer att delta, vänligen ange ditt samtycke till villkoren som nämnts genom att klicka på den gröna knappen "Jag samtycker" (notera att detta även kommer  fungera som klartecken för forskaren att påbörja videoinspelningen). Om du inte samtycker och inte vill fortsätta, klicka på den röda knappen "Jag samtycker inte".</p>
+          <h2>Samtycker du villkoren för studien?</h2>
+          <div id="buttons">
+              <button id="accept" type="submit" onclick="redirectToPage('page2a-accept.html')">Jag samtycker</button>
+              <button id="reject" type="submit" onclick="redirectToPage('page2b-reject.html')">Jag samtycker inte</button>
+          </div>
+  </body>
+</html>

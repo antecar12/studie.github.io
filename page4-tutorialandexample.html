@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Studie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    function redirectToPage(page, event) {
+      event.preventDefault();
+      switch(page) {
+        case 'page5.html':
+          window.location.href = page;
+          break;
+        // add more cases for additional pages and buttons
+        default:
+          console.log("Invalid page");
+      }
+    }
+    </script>
+    <style>
+        body {
+          font-family: sans-serif;
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #F5F5F5;
+        }
+
+        form {
+          background-color: #FFFFFF;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+          width: 400px;
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: #333333;
+        }
+
+        input[type="number"],
+        input[type="range"],
+        select {
+          width: calc(100% - 24px);
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #CCCCCC;
+          font-size: 16px;
+          color: #333333;
+          margin: 0 auto;
+          display: block;
+        }
+        
+        #gender {
+            width: 100%;
+        }
+
+        input[type="number"]:focus,
+        input[type="range"]:focus,
+        select:focus {
+          outline: none;
+          border-color: #4CAF50;
+        }
+
+        button[type="submit"] {
+          background-color: #4CAF50;
+          color: #FFFFFF;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.2s ease-in-out;
+          width: 100%;
+          display: block;
+          margin: 20px auto 0;
+        }
+
+        button[type="submit"]:hover {
+          background-color: #3e8e41;
+        }
+        
+        #formheader {
+            text-align: center;
+        }
+
+    </style>
+  </head>
+  <body class="container">
+    <h1>Instruktioner och Exempel</h1>
+    <form>
+      <div id="formheader">
+          <h1>Vänligen fråga forskaren om ditt deltagar-ID.</h1>
+      </div>
+      <h3>Såhär kommer gränssnittet för användartestet se ut:</h3>
+      <div>
+      </div>
+      <h3>Såhär använder du metoden:</h3>
+      <p><b>1.</b> Först måste du ange ditt angivna deltagar-id i textinmatningsfältet "Deltagar-ID". <br><br><b>2.</b> När du har angett ditt deltagar-id kommer du att se en uppsättning av två bilder. Använd randomisera-knappen för att ändra de två bilderna. Fortsätt att randomisera bilderna tills du kommer på/tänker ut en passande lösenordsfras inspirerad av två bilder.<br><br><b>3.</b> När du har tänkt ut en lösenordsfras anger du den i textinmatningsfälten "Lösenord" och "Bekräfta lösenord".  <br><br> <b>4.</b> Klicka slutligen på skicka för att slutföra processen för att skapa lösenord. (Meddela gärna forskaren om du har några frågor eller behöver hjälp under processen.)</p>
+        <p>Poängen med metoden är alltså att använda <b>bilder som inspiration</b> för att skapa <b>lösenordsfraser</b> (istället för lösenord). <br><br><b>Lösenordsfraser</b> = Lösenord i form av meningar eller kombinationer av ord. <br><br><b>Lösenord</b> = Lösenord i form av enstaka ord.</p>
+        <h3>Här är ett exempel på en lösenordsfras inspirerad av två bilder:</h3>
+        <p>Om du inte har några fler frågor, och du känner dig redo att genomföra testet, är det bara att trycka på "Starta test", så påbörjas testet.</p>
+      <div>
+      </div>
+      <button type="submit" onclick="redirectToPage('page5.html', event)">Starta test</button>
+    </form>
+    <script>
+      // JavaScript code can be added here to validate and process the form data
+    </script>
+  </body>
+</html>

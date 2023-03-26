@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Studie</title>
+    <script>
+    function redirectToPage(page) {
+      switch(page) {
+        case 'page3-demographics.html':
+          window.location.href = page;
+          break;
+        // add more cases for additional pages and buttons
+        default:
+          console.log("Invalid page");
+      }
+    }
+    </script>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 50px;
+        text-align: center;
+      }
+        
+        h2 {
+            font-size: 20px;
+        }
+        
+        #buttons {
+            display: flex;
+        }
+        
+        #continue {
+              background-color: #4CAF50;
+              color: #FFFFFF;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background-color 0.2s ease-in-out;
+              width: 45%;
+              display: block;
+              margin: 20px auto 0;
+            }
+        #continue:hover {
+              background-color: #3e8e41;
+              }
+    </style>
+  </head>
+  <body>
+          <h1>Tack för att du väljer att delta i denna studie!</h1>
+          <p>Vänligen vänta tills forskaren har startat videoinspelningen och ger dig klartecken innan du trycker på "fortsätt".</p>
+          <div id="buttons">
+              <button id="continue" type="submit" onclick="redirectToPage('page3-demographics.html')">Fortsätt </button>
+          </div>
+  </body>
+</html>
