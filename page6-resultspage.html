@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Studie</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 50px;
+        text-align: center;
+      }
+        
+        h2 {
+            font-size: 20px;
+        }
+        
+        #buttons {
+            display: flex;
+        }
+        
+        #continue {
+              background-color: #4CAF50;
+              color: #FFFFFF;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background-color 0.2s ease-in-out;
+              width: 45%;
+              display: block;
+              margin: 20px auto 0;
+            }
+        #continue:hover {
+              background-color: #3e8e41;
+              }
+        
+        .form-group {
+              margin: 60px 0px 20px 0px;
+            }
+
+            label {
+              display: block;
+              margin-bottom: 5px;
+              font-weight: bold;
+              color: #333333;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+              width: calc(100% - 24px);
+              padding: 10px;
+              border-radius: 5px;
+              border: 1px solid #CCCCCC;
+              font-size: 16px;
+              color: #333333;
+              margin: 0 auto;
+              display: block;
+            }
+
+            input[type="text"]:focus,
+            input[type="password"]:focus {
+              outline: none;
+              border-color: #4CAF50;
+            }
+    </style>
+  </head>
+  <body>
+          <h1>Tack för att du genomförde användartestet!</h1>
+          <h1>Vänligen stäng INTE ner denna sidan</h1>
+          <p>Nu är det dags för intervjun. Du kan bara låta denna sidan vara kvar under tiden forskaren ställer dig frågor. Vänligen vänta så tar forskaren strax över.</p>
+          <div class="form-group">
+          <label for="password">Textfält</label>
+          <input type="text" autocomplete="off" id="password" name="password" required>
+        </div>
+  </body>
+</html>
